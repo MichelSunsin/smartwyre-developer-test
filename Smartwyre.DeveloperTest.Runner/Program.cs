@@ -32,19 +32,12 @@ class Program
         string rebateId, productId;
         decimal volume;
 
-        if (args.Length == 3 && decimal.TryParse(args[2], NumberStyles.Number, CultureInfo.InvariantCulture, out volume))
-        {
-            (rebateId, productId) = (args[0], args[1]);
-        }
-        else
-        {
-            Console.WriteLine("Available rebates: FIXED, RATE, UOM");
-            Console.WriteLine("Available products: P1, P2, P3");
-            rebateId = Prompt("Rebate identifier: ");
-            productId = Prompt("Product identifier: ");
-            while (!decimal.TryParse(Prompt("Volume: "), NumberStyles.Number, CultureInfo.InvariantCulture, out volume))
-                Console.WriteLine("Please enter a valid number.");
-        }
+        Console.WriteLine("Available rebates: FIXED, RATE, UOM");
+        Console.WriteLine("Available products: P1, P2, P3");
+        rebateId = Prompt("Rebate identifier: ");
+        productId = Prompt("Product identifier: ");
+        while (!decimal.TryParse(Prompt("Volume: "), NumberStyles.Number, CultureInfo.InvariantCulture, out volume))
+            Console.WriteLine("Please enter a valid number.");
 
         var result = service.Calculate(new CalculateRebateRequest
         {
