@@ -1,10 +1,7 @@
 ﻿using Smartwyre.DeveloperTest.Calculators;
-using Smartwyre.DeveloperTest.Data;
 using Smartwyre.DeveloperTest.Data.Interfaces;
 using Smartwyre.DeveloperTest.Types;
-using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 
 namespace Smartwyre.DeveloperTest.Services;

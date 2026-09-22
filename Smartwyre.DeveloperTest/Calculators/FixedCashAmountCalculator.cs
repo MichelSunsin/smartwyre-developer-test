@@ -1,7 +1,4 @@
 ﻿using Smartwyre.DeveloperTest.Types;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Smartwyre.DeveloperTest.Calculators
 {
