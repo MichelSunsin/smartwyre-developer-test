@@ -4,7 +4,7 @@ namespace Smartwyre.DeveloperTest.Calculators
 {
     public class AmountPerUomCalculator : IRebateCalculator
     {
-        public IncentiveType IncentiveType => IncentiveType.AmountPerUom
+        public IncentiveType IncentiveType => IncentiveType.AmountPerUom;
         public SupportedIncentiveType RequiredProductSupport => SupportedIncentiveType.AmountPerUom;
         public bool TryCalculateRebate(Rebate rebate, Product product, CalculateRebateRequest request, out decimal rebateAmount)
         {
